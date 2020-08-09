@@ -1,0 +1,20 @@
+<!--pages/myclub/myclub.wxml-->
+<view class="cu-card dynamic" wx:for="{{myClub}}" wx:key="id">
+	<view class="cu-item shadow">
+		<view class="cu-list menu-avatar">
+			<view class="cu-item">
+				<view class="cu-avatar round lg" style="background-image:url({{item.club.avatar}});"></view>
+				<view class="content flex-sub">
+					<view class="text-bold" style="font-size:36rpx;padding-bottom:5rpx">
+						{{item.club.club_name}}
+						<view class="text-gray text-sm padding-left-sm">{{item.clubson.clubson_name}}</view>
+					</view>
+					<view class="flex justify-between">
+						<view class="cu-tag radius bg-yellow">{{item.position}}</view>
+						<view class="cu-tag radius bg-grey" wx:if="{{item.open_msg == 0}}"  bindtap="OpenMsg" data-id="{{item.id}}">开启订阅消息</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

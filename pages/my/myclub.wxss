@@ -1,0 +1,5 @@
+/* pages/myclub/myclub.wxss */
+.cu-card>.cu-item {
+    margin-bottom: 0rpx;
+}
+
